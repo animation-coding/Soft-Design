@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Neumorphism Ui</title>
+<style>
+html {
+  background-color: #ECF0F3;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  margin: 25px auto 25px;
+  width: 1200px;
+}
+
+.col {
+  flex: 1;
+  width: 30%;
+}
+
+.shape {
+  margin: 25px auto 50px;
+}
+
+.shape-square {
+  border-radius: 35px;
+  height: 275px;
+  width: 275px;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  position: relative;
+  height: 275px;
+  width: 275px;
+}
+.shape-circle::after {
+  content: "";
+  background-color: #ecf0f3;
+  border-radius: 50%;
+  box-shadow: -12px -12px 30px 5px rgba(255, 255, 255, 0.9), 12px 12px 30px 5px rgba(50, 58, 73, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  height: 140px;
+  width: 140px;
+  transform: translate(-50%, -50%);
+}
+
+.shape-drop-shadow {
+  background-color: #e3e6ec;
+  box-shadow: -12px -12px 30px 5px rgba(255, 255, 255, 0.9), 12px 12px 30px 5px rgba(50, 58, 73, 0.2);
+}
+
+.shape-inner-shadow {
+  background-color: #e6e9ef;
+  box-shadow: inset -12px -12px 30px 5px rgba(255, 255, 255, 0.9), inset 12px 12px 30px 5px rgba(50, 58, 73, 0.2);
+}
+
+.shape-label {
+  color: #686e71;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.shape-heading {
+  font-size: 32px;
+  text-align: center;
+}
+
+.shape-attribute-list {
+  font-size: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.shape-attribute-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.shape-attribute-key {
+  color: #686e71;
+}
+
+.shape-attribute-value {
+  color: #1d1e1f;
+  font-weight: 700;
+}
+
+</style>    
+</head>
+<body>
+   <div class="container">
+  <div class="col">
+    <div class="shape shape-square shape-drop-shadow"></div>
+    <p class="shape-label">Initial</p>
+    <h2 class="shape-heading">drop shadow</h2>
+    <ul class="shape-attribute-list">
+      <li><span class="shape-attribute-key">shadow 1: </span> <span class="shape-attribute-value">255, 255, 255, 0.9</span></li>
+      <li><span class="shape-attribute-key">shadow 2: </span> <span class="shape-attribute-value">50, 58, 73, 0.2</span></li>
+      <li><span class="shape-attribute-key">X and Y:</span> <span class="shape-attribute-value">+/-12px</span></li>
+      <li><span class="shape-attribute-key">blur:</span> <span class="shape-attribute-value">30px</span></li>
+      <li><span class="shape-attribute-key">spread:</span> <span class="shape-attribute-value">5px</span></li>
+    </ul>
+  </div>
+  <div class="col">
+    <div class="shape shape-square shape-inner-shadow"></div>
+    <p class="shape-label">Pressed</p>
+    <h2 class="shape-heading">inset shadow</h2>
+    <ul class="shape-attribute-list">
+      <li><span class="shape-attribute-key">shadow 1:</span> <span class="shape-attribute-value">255, 255, 255, 0.9</span></li>
+      <li><span class="shape-attribute-key">shadow 2:</span> <span class="shape-attribute-value">50, 58, 73, 0.2</span></li>
+      <li><span class="shape-attribute-key">X and Y:</span> <span class="shape-attribute-value">+/-12</span></li>
+      <li><span class="shape-attribute-key">blur:</span> <span class="shape-attribute-value">30px</span></li>
+      <li><span class="shape-attribute-key">spread:</span> <span class="shape-attribute-value">5px</span></li>
+    </ul>
+  </div>
+  <div class="col">
+    <div class="shape shape-circle shape-inner-shadow"></div>
+    <p class="shape-label">donut shadow</p>
+    <h2 class="shape-heading">circle</h2>
+    <ul class="shape-attribute-list">
+      <li><span class="shape-attribute-key">background:</span> <span class="shape-attribute-value">#ecf0f3</span></li>
+    </ul>
+  </div>
+</div>
+    
+</body>
+</html>
